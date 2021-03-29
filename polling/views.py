@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,HttpResponseRedirect,redirect
 from .models import CreatPoll,OpenPoll
 from .forms import PollForm
 from django.core.mail import send_mail as sm
@@ -44,6 +44,7 @@ def Tpolls(request):
     return render(request,'Tpolls.html',context)
 
 def CreatePoll(request,poll_id):
+    poll=CreatPoll.objects.get(pk=poll_id)
     if request.method == 'POST':
 
         poll=CreatPoll.objects.get(pk=poll_id)
@@ -68,8 +69,8 @@ def CreatePoll(request,poll_id):
         poll.on4+=int(request.POST['on4'])
         poll.save()
     
-        return redirect('Tpolls')
-    poll=CreatPoll.objects.get(pk=poll_id)
+        return HttpResponseRedirect('/pollResult/%d/'%poll.id)
+    
     context={
         'poll':poll
     }
