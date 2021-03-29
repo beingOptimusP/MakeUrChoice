@@ -35,10 +35,11 @@ def create(request):
 
 
 def Tpolls(request):
-    objects=CreatPoll.objects.all()
+    o=CreatPoll.objects.all()
     # objects_Open=OpenPoll.objects.all()
+    
     context={
-        'poll':objects
+        'poll':o
     }
     return render(request,'Tpolls.html',context)
 
@@ -60,7 +61,7 @@ def CreatePoll(request,poll_id):
         if on4==1:
             poll.four_1+=1
 
-
+        poll.votes=poll.one_1+poll.two_1+poll.three_1+poll.four_1
         poll.on1+=int(request.POST['on1'])
         poll.on2+=int(request.POST['on2'])
         poll.on3+=int(request.POST['on3'])

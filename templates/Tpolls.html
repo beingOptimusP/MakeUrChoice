@@ -21,6 +21,9 @@
                             <th>
                                 <center>Results</center>
                             </th>
+                            <th>
+                                <center>Votes till now</center>
+                            </th>
                         </tr>
                     </thead>
         
@@ -37,6 +40,9 @@
                         <td><a href="{% url 'result' i.id %}">
                                 <center><button class="btn btn-primary">Results</button></center>
                             </a></td>
+                        <td>
+                            <center>{{i.votes}}</center>
+                        </td>
                     </tr>
             {% endfor %}
                 </tbody>

@@ -15,6 +15,7 @@ class CreatPoll(models.Model):
     two_1=models.IntegerField(default=0)
     three_1=models.IntegerField(default=0)
     four_1=models.IntegerField(default=0)
+    votes=models.IntegerField(default=0)
     
 
 
