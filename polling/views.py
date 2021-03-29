@@ -87,14 +87,15 @@ def pollResult(request,poll_id):
     x=arr.index(min(arr))
 
     win=a[x]
-
+    m=0
     for i in arr:
         if arr[x]==i:
-            if Ar[x]>Ar[arr.index(i)]:
+            if Ar[x]>Ar[m]:
                 win=a[x]
             else:
-                win=a[arr.index(i)]
+                win=a[m]
 
+        m=m+1
         context={
         'poll':poll,
         'win':win 
