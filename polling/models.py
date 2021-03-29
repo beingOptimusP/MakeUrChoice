@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 class CreatPoll(models.Model):
     Title = models.TextField()
-    o1 = models.CharField( max_length=150)
-    o2 = models.CharField( max_length=150)
-    o3 = models.CharField( max_length=150)
-    o4 = models.CharField( max_length=150)
+    o1 = models.TextField()
+    o2 = models.TextField()
+    o3 = models.TextField()
+    o4 = models.TextField()
     on1= models.IntegerField(default=0)
     on2= models.IntegerField(default=0)
     on3= models.IntegerField(default=0)

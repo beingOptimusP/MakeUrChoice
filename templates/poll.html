@@ -185,6 +185,8 @@
     </nav>
     <br><br>
     
+
+    <center><h4>Share link of this poll with ur friends:" <a href="{% url 'poll' poll.id %}" style="color: blue;" >https://makeurchoice.herokuapp.com{% url 'poll' poll.id %}</a> "</h4></center><br><br>
     <div class="form">
         <form  method="POST">
             {% csrf_token %}

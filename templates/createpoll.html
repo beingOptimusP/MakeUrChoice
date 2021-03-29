@@ -70,9 +70,9 @@
 
                 <label>Title</label>
                 <div class="field">
-                    {% comment %} <textarea name='title' placeholder="Type your question here..." rows="2" class="input"
-                        style="height: 50px;"></textarea> {% endcomment %}
-                    {% render_field form.Title class="input" placeholder="Type your question here..."  style="height:50px" %}
+                    {% comment %} <textarea name='Title' placeholder="Type your question here..." rows="2" class="input"
+                        style="height: 50px;"></textarea>  {% endcomment %}
+                    {% render_field form.Title class="input" placeholder="Type your question here..."  style="height:100px" %} 
                     {% comment %} <input placeholder="" required="required" class="input"> {% endcomment %}
                 </div>
 
@@ -88,12 +88,23 @@
                     {% comment %} <input name="o1" placeholder="Type your option here..." required="required" class="input">
                     <input name="o2" placeholder="Type your option here..." required="required" class="input">
                     <input name="o3" placeholder="Type your option here..." required="required" class="input">
-                    <input name="o4" placeholder="Type your option here..." required="required" class="input"> {% endcomment %}
+                    <input name="o4" placeholder="Type your option here..." required="required" class="input">  {% endcomment %}
 
-                    {% render_field form.o1 class="input" placeholder="Type your option here..." %}
+                    <textarea name='o1' placeholder="Type your option here..." rows="2" class="input"
+                        style="height: 50px;"></textarea> 
+                    <textarea name='o2' placeholder="Type your option here..." rows="2" class="input"
+                        style="height: 50px;"></textarea> 
+                    <textarea name='o3' placeholder="Type your option here..." rows="2" class="input"
+                        style="height: 50px;"></textarea> 
+                    <textarea name='o4' placeholder="Type your option here..." rows="2" class="input"
+                        style="height: 50px;"></textarea> 
+
+
+
+                    {% comment %} {% render_field form.o1 class="input" placeholder="Type your option here..." style="height:50px" %}
                     {% render_field form.o2 class="input" placeholder="Type your option here..." %}
                     {% render_field form.o3 class="input" placeholder="Type your option here..." %}
-                    {% render_field form.o4 class="input" placeholder="Type your option here..." %}
+                    {% render_field form.o4 class="input" placeholder="Type your option here..." %} {% endcomment %}
 
 
                     <!-- div for new options -->
