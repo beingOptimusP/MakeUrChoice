@@ -58,15 +58,14 @@
         display: flex;
         flex-wrap: wrap;
 
-
+        
 
 
     }
 
     #content {
-        padding: 50px;
-        padding-top: 124px;
-        width: 600px;
+       
+        max-width: 590px;
 
 
 
@@ -88,6 +87,7 @@
         background: rgba(255, 184, 184, 0.4);
         backdrop-filter: blur(10px);
         padding-left: 40px;
+        padding-right: 40px;
 
     }
 
@@ -110,9 +110,8 @@
 
     #poll {
         border-bottom: 2px solid #2f2e41;
-        margin: 50px;
-      
-        padding: 0;
+        margin-top: 100px;
+        margin: auto;
         display: flex;
         align-items: flex-end;
         justify-items: center;
@@ -120,7 +119,7 @@
 
         max-height: 500px;
         max-width: 600px;
-        min-width: 300px;
+        min-width: 100px;
 
     }
 
@@ -183,7 +182,7 @@
     @keyframes size {
 
         50% {
-            height: 400px;
+            height: 300px;
         }
 
     }
@@ -193,8 +192,9 @@
 
 
         max-height: 500px;
+        max-width: 200px;
        
-        margin-left: 50px;
+        
 
     }
 
@@ -224,7 +224,7 @@
         margin: auto;
         overflow: hidden;
         position: relative;
-        top: 20%;
+        top: 10%;
 
 
         width: 80vw;
@@ -237,7 +237,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 80px;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
         
     }
 
@@ -328,7 +328,7 @@
         line-height: 36px;
        
         padding: 10px;
-        text-decoration: none;
+       text-decoration: none;
 
         transition: 0.2s ease-out;
     }
@@ -436,18 +436,22 @@
     a:hover {
         color: white;
     }
-   @media (max-width:600px){
+    @media screen and (max-width: 800px) {
        
+      left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
     .content{
         width: 100%;
         justify-content: center;
 
     }
     #head{
+      
         font-size: 50px;
     }
     .poll{
-
+        display: none;
         width: 1vw;
     }
     .cont{
