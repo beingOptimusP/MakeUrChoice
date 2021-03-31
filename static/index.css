@@ -65,7 +65,8 @@
 
     #content {
        
-        max-width: 590px;
+        max-width: 500px;
+        margin: 50px;
 
 
 
@@ -118,7 +119,7 @@
         justify-content: center;
 
         max-height: 500px;
-        max-width: 600px;
+        max-width: 500px;
         min-width: 100px;
 
     }
