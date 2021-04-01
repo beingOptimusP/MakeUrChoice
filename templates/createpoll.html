@@ -79,9 +79,8 @@
 
                 <label>Title</label>
                 <div class="field">
-                    {% comment %} <textarea name='Title' placeholder="Type your question here..." rows="2" class="input"
-                        style="height: 50px;"></textarea>  {% endcomment %}
-                    {% render_field form.Title class="input" placeholder="Type your question here..."  style="height:100px" %} 
+                    <textarea name='Title1' placeholder="Type your question here..." rows="2" class="input" style="height: 50px;"></textarea>  
+                    {% comment %} {% render_field form.Title class="input" placeholder="Type your question here..."  style="height:100px" %}  {% endcomment %}
                     {% comment %} <input placeholder="" required="required" class="input"> {% endcomment %}
                 </div>
 
@@ -131,8 +130,8 @@
 
                    <input type="radio" id="open" name="polltype" value="open">
                     <label>Open poll</label><br>
-                    <input type="radio" id="closed" name="polltype" value="closed">
-                    <label>Closed poll</label><br>
+                    {% comment %} <input type="radio" id="closed" name="polltype" value="closed">
+                    <label>Closed poll</label><br> {% endcomment %}
                     <input type="radio" id="prefferance" name="polltype" value="preference">
                     <label>Prefferance poll</label><br><br> 
 

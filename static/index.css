@@ -17,11 +17,14 @@
 
  /* css for nav bar start here*/
 
+    .navbar{
+        height: 48px;
+    }
 
     .navbar-brand {
         font-family: 'Lobster', cursive;
         font-size: 30px;
-
+        background: #2f2e41;
 
     }
 
@@ -459,8 +462,4 @@
         display: block;
     }
     
-    
-
-
-
-   }
+    }

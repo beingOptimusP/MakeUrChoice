@@ -4,7 +4,7 @@
 <br><br><br>
 <center><h3 class="h3" >Vote your poll and see results here(latest created polls would be on top)</h3></center><br><br>
 
-<center><h2>PVS POlls</h2></center>
+<center><h3>PVS POlls</h3></center>
 
     <div class="coont" style="margin-left: 100px;margin-right:100px">
         <center>
@@ -51,18 +51,20 @@
     </div>
 
 
+<br><br><br>
 
+<center>
+    <h3>Open POlls</h3>
+</center>
 
-<!-- {% for i in poll1 %}
+<br><br>
+
 <div class="coont" style="margin-left: 100px;margin-right:100px">
     <center>
         <table class="table table-striped table-dark">
             <center>
                 <thead>
                     <tr>
-                        <th>
-                            <center>S.no</center>
-                        </th>
                         <th>
                             <center>Title</center>
                         </th>
@@ -75,28 +77,27 @@
                     </tr>
                 </thead>
             </center>
+        {% for i in poll1 reversed %}
             <tbody>
                 <tr>
                     <td>
-                        <center>{{i.id}}</center>
+                        <center>{{i.title}} <i class="fas fa-arrows-alt-h"> </i></center>
                     </td>
-                    <td>
-                        <center>{{i.Title}} <i class="fas fa-arrows-alt-h"> </i></center>
-                    </td>
-                    <td><a href="{% url 'poll' i.id %}">
+                    <td><a href="{% url 'open' i.id %}">
                             <center><button class="btn btn-primary">vote</button></center>
                         </a></td>
-                    <td><a href="{% url 'result' i.id %}">
+                    <td><a href="{% url 'openResult' i.id %}">
                             <center><button class="btn btn-primary">Results</button></center>
                         </a></td>
                 </tr>
+        {% endfor %}
             </tbody>
         </table>
     </center>
 </div>
 
 
-{% endfor %} -->
+
 
 {% endblock %}
 

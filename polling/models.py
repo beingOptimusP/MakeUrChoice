@@ -20,11 +20,11 @@ class CreatPoll(models.Model):
 
 
 class OpenPoll(models.Model):
-    Title = models.TextField()
-    o1 = models.CharField( max_length=50)
-    o2 = models.CharField( max_length=50)
-    o3 = models.CharField( max_length=50)
-    o4 = models.CharField( max_length=50)
+    title = models.TextField()
+    o1 = models.TextField()
+    o2 = models.TextField()
+    o3 = models.TextField()
+    o4 = models.TextField()
     on1= models.IntegerField(default=0)
     on2= models.IntegerField(default=0)
     on3= models.IntegerField(default=0)

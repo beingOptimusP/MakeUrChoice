@@ -9,5 +9,6 @@ urlpatterns = [
     path('pollResult/<poll_id>/',views.pollResult,name='result'),
     path('Tpolls',views.Tpolls,name='Tpolls'),
     path('Teams',views.Teams,name="Team"),
-    path('Openpoll/<poll_id>/',views.OpenPoll,name='open')
+    path('Openpoll/<poll_id>/',views.OpePoll,name='open'),
+    path('openResult/<poll_id>/',views.OpenResult,name='openResult')
 ]
