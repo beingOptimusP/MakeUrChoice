@@ -6,6 +6,7 @@
         <form method="POST">
             {% csrf_token %}
             <center>
+            <br><br>
                 <h3>{{poll.title}}</h3><br><br>
                 <div style="width:500px">{{poll.o1}}: <input name="p" type="radio" value="{{poll.o1}}"></div><br>
                 <div style="width:500px">{{poll.o2}}: <input name="p" type="radio" value="{{poll.o2}}"></div><br>

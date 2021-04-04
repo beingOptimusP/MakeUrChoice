@@ -66,29 +66,32 @@ def CreatePoll(request,poll_id):
     poll=CreatPoll.objects.get(pk=poll_id)
     if request.method == 'POST':
 
-        poll=CreatPoll.objects.get(pk=poll_id)
-        on1=int(request.POST['on1'])
-        on2=int(request.POST['on2'])
-        on3=int(request.POST['on3'])
-        on4=int(request.POST['on4'])
+        if request.POST['on1'] == 0:
+            return HttpResponseRedirect('/Createpoll/%d/'%poll.id)
+        else:
+            poll=CreatPoll.objects.get(pk=poll_id)
+            on1=int(request.POST['on1'])
+            on2=int(request.POST['on2'])
+            on3=int(request.POST['on3'])
+            on4=int(request.POST['on4'])
 
-        if on1==1:
-            poll.one_1+=1
-        if on2==1:
-            poll.two_1+=1
-        if on3==1:
-            poll.three_1+=1
-        if on4==1:
-            poll.four_1+=1
+            if on1==1:
+                poll.one_1+=1
+            if on2==1:
+                poll.two_1+=1
+            if on3==1:
+                poll.three_1+=1
+            if on4==1:
+                poll.four_1+=1
 
-        poll.votes=poll.one_1+poll.two_1+poll.three_1+poll.four_1
-        poll.on1+=int(request.POST['on1'])
-        poll.on2+=int(request.POST['on2'])
-        poll.on3+=int(request.POST['on3'])
-        poll.on4+=int(request.POST['on4'])
-        poll.save()
-    
-        return HttpResponseRedirect('/pollResult/%d/'%poll.id)
+            poll.votes=poll.one_1+poll.two_1+poll.three_1+poll.four_1
+            poll.on1+=int(request.POST['on1'])
+            poll.on2+=int(request.POST['on2'])
+            poll.on3+=int(request.POST['on3'])
+            poll.on4+=int(request.POST['on4'])
+            poll.save()
+
+            return HttpResponseRedirect('/pollResult/%d/'%poll.id)
     
     context={
         'poll':poll
@@ -146,6 +149,7 @@ def OpePoll(request,poll_id):
         if win == poll.o4:
             poll.on4+=1
 
+        poll.votes=poll.on1+poll.on2+poll.on3+poll.on4
         poll.save()
     
         return HttpResponseRedirect('/openResult/%d/'%poll.id)

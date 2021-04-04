@@ -29,4 +29,5 @@ class OpenPoll(models.Model):
     on2= models.IntegerField(default=0)
     on3= models.IntegerField(default=0)
     on4= models.IntegerField(default=0)
+    votes=models.IntegerField(default=0)
 
